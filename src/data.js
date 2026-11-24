@@ -89,95 +89,39 @@ export const RECIPES = {
 };
 
 export const CUSTOMERS = [
-  {
-    id: 'bunny',
-    name: 'Bunny',
-    personality: 'Shy & sweet',
-    favorite: 'strawberry_milkshake',
-    color: 0xfbe9e7,
-    accentColor: 0xf48fb1,
-    earType: 'bunny',
-  },
-  {
-    id: 'panda',
-    name: 'Panda',
-    personality: 'Sleepy',
-    favorite: 'green_tea',
-    color: 0xfafafa,
-    accentColor: 0x2b2b2b,
-    earType: 'panda',
-  },
-  {
-    id: 'fox',
-    name: 'Fox',
-    personality: 'Energetic',
-    favorite: 'orange_juice',
-    color: 0xef6c00,
-    accentColor: 0xfff3e0,
-    earType: 'fox',
-  },
-  {
-    id: 'bear',
-    name: 'Bear',
-    personality: 'Friendly',
-    favorite: 'honey_pancakes',
-    color: 0x8d6e63,
-    accentColor: 0xd7ccc8,
-    earType: 'bear',
-  },
-  {
-    id: 'duck',
-    name: 'Duck',
-    personality: 'Playful',
-    favorite: 'bubble_tea',
-    color: 0xfff176,
-    accentColor: 0xff8f00,
-    earType: 'duck',
-  },
-  {
-    id: 'cat',
-    name: 'Cat',
-    personality: 'Picky',
-    favorite: 'cappuccino',
-    color: 0xcfd8dc,
-    accentColor: 0xf48fb1,
-    earType: 'cat',
-  },
-  {
-    id: 'golden_bunny',
-    name: 'Golden Bunny',
-    personality: 'Rare VIP!',
-    favorite: 'bubble_tea',
-    color: 0xffd54f,
-    accentColor: 0xfff8e1,
-    earType: 'bunny',
-    rare: true,
-  },
+  { id: 'bunny', name: 'Bunny', personality: 'Shy & sweet', favorite: 'strawberry_milkshake', patience: 44, color: 0xfbe9e7, accentColor: 0xf48fb1, earType: 'bunny' },
+  { id: 'panda', name: 'Panda', personality: 'Sleepy', favorite: 'green_tea', patience: 64, color: 0xfafafa, accentColor: 0x2b2b2b, earType: 'panda' },
+  { id: 'fox', name: 'Fox', personality: 'Energetic', favorite: 'orange_juice', patience: 36, color: 0xef6c00, accentColor: 0xfff3e0, earType: 'fox' },
+  { id: 'bear', name: 'Bear', personality: 'Friendly', favorite: 'honey_pancakes', patience: 52, color: 0x8d6e63, accentColor: 0xd7ccc8, earType: 'bear' },
+  { id: 'duck', name: 'Duck', personality: 'Playful', favorite: 'bubble_tea', patience: 45, color: 0xfff176, accentColor: 0xff8f00, earType: 'duck' },
+  { id: 'cat', name: 'Cat', personality: 'Picky', favorite: 'cappuccino', patience: 32, color: 0xcfd8dc, accentColor: 0xf48fb1, earType: 'cat' },
+  { id: 'golden_bunny', name: 'Golden Bunny', personality: 'Rare VIP!', favorite: 'bubble_tea', patience: 42, color: 0xffd54f, accentColor: 0xfff8e1, earType: 'bunny', rare: true },
 ];
 
 export const SHOP_ITEMS = [
-  // Decor & Upgrades
   { id: 'table_3', category: 'decor', name: 'Cozy Table #3', emoji: '🪑', desc: 'Serve one more animal at once!', price: 75 },
   { id: 'table_4', category: 'decor', name: 'Window Table #4', emoji: '🪟', desc: 'Unlock all 4 café tables!', price: 140 },
-  { id: 'plants', category: 'decor', name: 'Potted Monstera & Flowers', emoji: '🪴', desc: 'Adds lush café greenery (+10% tips)', price: 55 },
+  { id: 'plants', category: 'decor', name: 'Potted Monstera & Flowers', emoji: '🪴', desc: 'Adds lush café greenery (+2 coin tips)', price: 55 },
   { id: 'lights', category: 'decor', name: 'Warm Fairy Lights', emoji: '✨', desc: 'Cozy golden glow & +2 coin tips', price: 85 },
   { id: 'speed_boots', category: 'decor', name: 'Barista Sneakers', emoji: '👟', desc: 'Capybara walks 30% faster!', price: 95 },
-
-  // Outfits
   { id: 'hat_none', category: 'outfit', name: 'Classic Barista', emoji: '🦫', desc: 'Natural adorable capybara look', price: 0, slot: 'hat' },
   { id: 'hat_flower', category: 'outfit', name: 'Pink Flower Hat', emoji: '🌸', desc: 'Sweet pastel blossom hat', price: 45, slot: 'hat' },
   { id: 'hat_chef', category: 'outfit', name: 'Little Chef Hat', emoji: '👨‍🍳', desc: 'Master forest café chef', price: 80, slot: 'hat' },
   { id: 'glasses', category: 'outfit', name: 'Cute Glasses', emoji: '👓', desc: 'Stylish round barista glasses', price: 60, slot: 'glasses' },
-
-  // Themes
   { id: 'theme_forest', category: 'theme', name: 'Forest Café', emoji: '🌲', desc: 'Warm oak woods & sunny forest', price: 0 },
   { id: 'theme_flower', category: 'theme', name: 'Flower Café', emoji: '🌷', desc: 'Blossom walls & pastel garden', price: 120 },
   { id: 'theme_beach', category: 'theme', name: 'Beach Café', emoji: '🏖️', desc: 'Breezy seaside & turquoise sea', price: 180 },
 ];
 
-export const DAILY_MISSIONS = [
-  { id: 'm_serve', label: 'Serve 8 customers', type: 'served', target: 8, rewardCoins: 50, rewardGems: 2 },
-  { id: 'm_strawberry', label: 'Make 3 Strawberry Milkshakes', type: 'strawberry', target: 3, rewardCoins: 35, rewardGems: 1 },
+export const MISSION_POOL = [
+  { id: 'm_serve_8', label: 'Serve 8 customers', type: 'served', target: 8, rewardCoins: 50, rewardGems: 2 },
+  { id: 'm_serve_14', label: 'Busy Café: Serve 14 customers', type: 'served', target: 14, rewardCoins: 90, rewardGems: 3 },
+  { id: 'm_strawberry', label: 'Make 3 Strawberry Milkshakes', type: 'strawberry_milkshake', target: 3, rewardCoins: 35, rewardGems: 1 },
+  { id: 'm_cappuccino', label: 'Brew 4 Cappuccinos', type: 'cappuccino', target: 4, rewardCoins: 45, rewardGems: 1 },
+  { id: 'm_pancakes', label: 'Bake 3 Honey Pancakes', type: 'honey_pancakes', target: 3, rewardCoins: 55, rewardGems: 2 },
+  { id: 'm_boba', label: 'Make 3 Bubble Teas', type: 'bubble_tea', target: 3, rewardCoins: 45, rewardGems: 2 },
   { id: 'm_clean', label: 'Clean 3 dirty tables', type: 'cleaned', target: 3, rewardCoins: 30, rewardGems: 1 },
+  { id: 'm_fast', label: 'Serve 5 fast orders (⚡)', type: 'fast', target: 5, rewardCoins: 60, rewardGems: 2 },
+  { id: 'm_combo', label: 'Hit a 3x Speed Combo', type: 'combo3', target: 1, rewardCoins: 65, rewardGems: 2 },
   { id: 'm_rare', label: 'Welcome a Rare Golden Bunny', type: 'rare', target: 1, rewardCoins: 80, rewardGems: 3 },
 ];
