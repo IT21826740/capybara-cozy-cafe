@@ -1,0 +1,183 @@
+export const RECIPES = {
+  strawberry_milkshake: {
+    id: 'strawberry_milkshake',
+    name: 'Strawberry Milkshake',
+    emoji: '🍓',
+    station: 'blender',
+    price: 22,
+    xp: 18,
+    color: 0xff8fab,
+    steps: [
+      { label: 'Select Glass', emoji: '🥛' },
+      { label: 'Add Milk', emoji: '🍼' },
+      { label: 'Add Strawberries', emoji: '🍓' },
+      { label: 'Blend & Cream', emoji: '🍥' },
+    ],
+  },
+  bubble_tea: {
+    id: 'bubble_tea',
+    name: 'Bubble Tea',
+    emoji: '🧋',
+    station: 'blender',
+    price: 25,
+    xp: 20,
+    color: 0xd9a066,
+    steps: [
+      { label: 'Boba Pearls', emoji: '⚫' },
+      { label: 'Brew Milk Tea', emoji: '🫖' },
+      { label: 'Add Ice', emoji: '🧊' },
+      { label: 'Seal & Shake', emoji: '🧋' },
+    ],
+  },
+  orange_juice: {
+    id: 'orange_juice',
+    name: 'Orange Juice',
+    emoji: '🍊',
+    station: 'blender',
+    price: 18,
+    xp: 14,
+    color: 0xffa726,
+    steps: [
+      { label: 'Slice Oranges', emoji: '🍊' },
+      { label: 'Squeeze Juice', emoji: '🧃' },
+      { label: 'Add Ice', emoji: '🧊' },
+    ],
+  },
+  cappuccino: {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    emoji: '☕',
+    station: 'espresso',
+    price: 20,
+    xp: 16,
+    color: 0x8d5524,
+    steps: [
+      { label: 'Grind Beans', emoji: '🫘' },
+      { label: 'Pull Espresso', emoji: '☕' },
+      { label: 'Foam Art', emoji: '🤍' },
+    ],
+  },
+  green_tea: {
+    id: 'green_tea',
+    name: 'Green Tea',
+    emoji: '🍵',
+    station: 'espresso',
+    price: 18,
+    xp: 15,
+    color: 0x81c784,
+    steps: [
+      { label: 'Matcha Scoop', emoji: '🌿' },
+      { label: 'Hot Water', emoji: '♨️' },
+      { label: 'Whisk Gently', emoji: '🍵' },
+    ],
+  },
+  honey_pancakes: {
+    id: 'honey_pancakes',
+    name: 'Honey Pancakes',
+    emoji: '🥞',
+    station: 'bakery',
+    price: 28,
+    xp: 24,
+    color: 0xf4b942,
+    steps: [
+      { label: 'Pour Batter', emoji: '🥣' },
+      { label: 'Flip Golden', emoji: '🍳' },
+      { label: 'Drizzle Honey', emoji: '🍯' },
+      { label: 'Add Butter', emoji: '🧈' },
+    ],
+  },
+};
+
+export const CUSTOMERS = [
+  {
+    id: 'bunny',
+    name: 'Bunny',
+    personality: 'Shy & sweet',
+    favorite: 'strawberry_milkshake',
+    color: 0xfbe9e7,
+    accentColor: 0xf48fb1,
+    earType: 'bunny',
+  },
+  {
+    id: 'panda',
+    name: 'Panda',
+    personality: 'Sleepy',
+    favorite: 'green_tea',
+    color: 0xfafafa,
+    accentColor: 0x2b2b2b,
+    earType: 'panda',
+  },
+  {
+    id: 'fox',
+    name: 'Fox',
+    personality: 'Energetic',
+    favorite: 'orange_juice',
+    color: 0xef6c00,
+    accentColor: 0xfff3e0,
+    earType: 'fox',
+  },
+  {
+    id: 'bear',
+    name: 'Bear',
+    personality: 'Friendly',
+    favorite: 'honey_pancakes',
+    color: 0x8d6e63,
+    accentColor: 0xd7ccc8,
+    earType: 'bear',
+  },
+  {
+    id: 'duck',
+    name: 'Duck',
+    personality: 'Playful',
+    favorite: 'bubble_tea',
+    color: 0xfff176,
+    accentColor: 0xff8f00,
+    earType: 'duck',
+  },
+  {
+    id: 'cat',
+    name: 'Cat',
+    personality: 'Picky',
+    favorite: 'cappuccino',
+    color: 0xcfd8dc,
+    accentColor: 0xf48fb1,
+    earType: 'cat',
+  },
+  {
+    id: 'golden_bunny',
+    name: 'Golden Bunny',
+    personality: 'Rare VIP!',
+    favorite: 'bubble_tea',
+    color: 0xffd54f,
+    accentColor: 0xfff8e1,
+    earType: 'bunny',
+    rare: true,
+  },
+];
+
+export const SHOP_ITEMS = [
+  // Decor & Upgrades
+  { id: 'table_3', category: 'decor', name: 'Cozy Table #3', emoji: '🪑', desc: 'Serve one more animal at once!', price: 75 },
+  { id: 'table_4', category: 'decor', name: 'Window Table #4', emoji: '🪟', desc: 'Unlock all 4 café tables!', price: 140 },
+  { id: 'plants', category: 'decor', name: 'Potted Monstera & Flowers', emoji: '🪴', desc: 'Adds lush café greenery (+10% tips)', price: 55 },
+  { id: 'lights', category: 'decor', name: 'Warm Fairy Lights', emoji: '✨', desc: 'Cozy golden glow & +2 coin tips', price: 85 },
+  { id: 'speed_boots', category: 'decor', name: 'Barista Sneakers', emoji: '👟', desc: 'Capybara walks 30% faster!', price: 95 },
+
+  // Outfits
+  { id: 'hat_none', category: 'outfit', name: 'Classic Barista', emoji: '🦫', desc: 'Natural adorable capybara look', price: 0, slot: 'hat' },
+  { id: 'hat_flower', category: 'outfit', name: 'Pink Flower Hat', emoji: '🌸', desc: 'Sweet pastel blossom hat', price: 45, slot: 'hat' },
+  { id: 'hat_chef', category: 'outfit', name: 'Little Chef Hat', emoji: '👨‍🍳', desc: 'Master forest café chef', price: 80, slot: 'hat' },
+  { id: 'glasses', category: 'outfit', name: 'Cute Glasses', emoji: '👓', desc: 'Stylish round barista glasses', price: 60, slot: 'glasses' },
+
+  // Themes
+  { id: 'theme_forest', category: 'theme', name: 'Forest Café', emoji: '🌲', desc: 'Warm oak woods & sunny forest', price: 0 },
+  { id: 'theme_flower', category: 'theme', name: 'Flower Café', emoji: '🌷', desc: 'Blossom walls & pastel garden', price: 120 },
+  { id: 'theme_beach', category: 'theme', name: 'Beach Café', emoji: '🏖️', desc: 'Breezy seaside & turquoise sea', price: 180 },
+];
+
+export const DAILY_MISSIONS = [
+  { id: 'm_serve', label: 'Serve 8 customers', type: 'served', target: 8, rewardCoins: 50, rewardGems: 2 },
+  { id: 'm_strawberry', label: 'Make 3 Strawberry Milkshakes', type: 'strawberry', target: 3, rewardCoins: 35, rewardGems: 1 },
+  { id: 'm_clean', label: 'Clean 3 dirty tables', type: 'cleaned', target: 3, rewardCoins: 30, rewardGems: 1 },
+  { id: 'm_rare', label: 'Welcome a Rare Golden Bunny', type: 'rare', target: 1, rewardCoins: 80, rewardGems: 3 },
+];

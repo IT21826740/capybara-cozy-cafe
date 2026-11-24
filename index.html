@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Capybara Cozy Café ☕</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <div id="world-overlays"></div>
+    <div id="floating-texts"></div>
+  </div>
+
+  <!-- Top HUD -->
+  <header id="hud-top">
+    <div class="hud-left">
+      <div class="pill level-pill">
+        <span class="pill-icon">☕</span>
+        <div>
+          <div class="level-title">Lv. <span id="hud-level">1</span> <span id="hud-theme-name">Forest Café</span></div>
+          <div class="xp-bar"><div id="hud-xp-fill"></div></div>
+        </div>
+      </div>
+      <div class="pill stat-pill">🪙 <span id="hud-coins">60</span></div>
+      <div class="pill stat-pill">💎 <span id="hud-gems">5</span></div>
+    </div>
+
+    <div class="hud-right">
+      <div id="held-badge" class="pill held-pill hidden">
+        Tray: <span id="held-emoji"></span> <span id="held-name"></span>
+      </div>
+      <button id="btn-missions" class="ui-btn" title="Daily Missions">📋 Missions <span id="mission-dot" class="dot hidden"></span></button>
+      <button id="btn-shop" class="ui-btn primary" title="Shop & Decor">🛍️ Shop</button>
+      <button id="btn-mute" class="ui-btn icon-only" title="Sound">🔊</button>
+    </div>
+  </header>
+
+  <!-- Bottom Controls / Hint -->
+  <div id="hud-bottom">
+    <div id="joystick-zone" class="joystick-zone">
+      <div class="joystick-base">
+        <div id="joystick-knob" class="joystick-knob"></div>
+      </div>
+    </div>
+
+    <div class="hint-bar">
+      Move: <b>WASD / Arrows</b> or <b>Click anywhere</b> &nbsp;|&nbsp; Interact: <b>Space / E</b> or <b>Click table/station</b>
+    </div>
+
+    <button id="btn-action" class="action-btn">
+      <span id="action-btn-label">Interact</span>
+    </button>
+  </div>
+
+  <!-- Drink & Food Prep Modal -->
+  <div id="prep-modal" class="modal hidden">
+    <div class="modal-card prep-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="prep-title">Make Strawberry Milkshake</h2>
+          <p id="prep-subtitle" class="muted">Tap the ingredients in order!</p>
+        </div>
+        <button id="prep-close" class="close-btn">✕</button>
+      </div>
+
+      <div id="prep-recipe-picker" class="recipe-picker"></div>
+
+      <div id="prep-workspace" class="prep-workspace hidden">
+        <div class="prep-progress-row" id="prep-steps-display"></div>
+        <div class="prep-stage">
+          <div id="prep-cup-visual" class="prep-cup">🥛</div>
+          <div id="prep-status-text" class="prep-status">Step 1: Select Glass</div>
+        </div>
+        <div id="prep-buttons" class="prep-buttons"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop, Wardrobe & Themes Modal -->
+  <div id="shop-modal" class="modal hidden">
+    <div class="modal-card shop-card">
+      <div class="modal-header">
+        <h2>🛍️ Café Shop & Wardrobe</h2>
+        <button id="shop-close" class="close-btn">✕</button>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="decor">🪑 Café & Decor</button>
+        <button class="tab-btn" data-tab="outfit">🎩 Outfits</button>
+        <button class="tab-btn" data-tab="theme">🌿 Themes</button>
+      </div>
+      <div id="shop-list" class="shop-list"></div>
+    </div>
+  </div>
+
+  <!-- Daily Missions Modal -->
+  <div id="missions-modal" class="modal hidden">
+    <div class="modal-card missions-card">
+      <div class="modal-header">
+        <h2>📋 Daily Café Missions</h2>
+        <button id="missions-close" class="close-btn">✕</button>
+      </div>
+      <div id="missions-list" class="missions-list"></div>
+    </div>
+  </div>
+
+  <!-- Toast Banner -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
